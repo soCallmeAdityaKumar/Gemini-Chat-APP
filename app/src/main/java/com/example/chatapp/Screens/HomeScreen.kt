@@ -22,6 +22,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.IconButton
 import androidx.compose.material.Snackbar
 import androidx.compose.material.SnackbarDuration
@@ -319,7 +320,9 @@ fun MessageItem(sender:Boolean,message: Message) {
                 .clip(RoundedCornerShape(10.dp))
                 .background(BlueHeading)
                 .padding(vertical = 10.dp, horizontal = 20.dp)){
-                Text(text = message.message,color=Color.White)
+                SelectionContainer {
+                    Text(text = message.message,color=Color.White, fontFamily = fontFamily)
+                }
 
             }
             Spacer(modifier = Modifier.height(2.dp))
@@ -332,11 +335,14 @@ fun MessageItem(sender:Boolean,message: Message) {
             .padding(start = 10.dp, end = 40.dp, bottom = 20.dp),
             horizontalAlignment = Alignment.Start
             ) {
+
             Box(modifier = Modifier
                 .clip(RoundedCornerShape(10.dp))
                 .background(endlineColor)
                 .padding(vertical = 10.dp, horizontal = 20.dp)){
-                Text(text = message.message,color=Color.Black)
+                SelectionContainer {
+                Text(text = message.message,color=Color.Black, fontFamily = fontFamily)
+                }
 
             }
             Spacer(modifier = Modifier.height(2.dp))

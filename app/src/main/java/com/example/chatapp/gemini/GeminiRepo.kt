@@ -6,7 +6,7 @@ import com.google.ai.client.generativeai.GenerativeModel
 
 class GeminiRepo {
     private var response:String?=null
-    private val API_KEY="AIzaSyCTiGnoz7YUJ5Zg-QQJWQIy1PeIB2Anyp0"
+    private val API_KEY=""
     private var generativeModel:GenerativeModel?=null
     init {
         generativeModel = GenerativeModel(

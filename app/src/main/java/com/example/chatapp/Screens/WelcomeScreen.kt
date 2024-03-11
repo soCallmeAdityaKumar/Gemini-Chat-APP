@@ -66,7 +66,7 @@ fun PagerScreen(navHostController: NavHostController,welcomeViewmodel: WelcomeVi
                     color= greyTitle, fontSize = 15.sp, fontFamily= fontFamily, textAlign = TextAlign.Center)
         }
 
-        Image(painterResource(id = R.drawable.welcome_image), contentDescription = "welcome_image")
+        Image(painterResource(id = R.drawable.welcome_image), contentDescription = "welcome_image", modifier = Modifier.size(250.dp))
         Button(
             modifier = Modifier
                 .fillMaxWidth()
